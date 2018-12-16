@@ -34,7 +34,6 @@ public class ProjectsFragment extends PresenterFragment<ProjectsPresenter> imple
     private RecyclerView mRecyclerView;
     private RefreshOwner mRefreshOwner;
     private View mErrorView;
-    private Storage mStorage;
     private ProjectsAdapter mProjectsAdapter;
     @Inject
     ProjectsPresenter mPresenter;
@@ -88,7 +87,6 @@ public class ProjectsFragment extends PresenterFragment<ProjectsPresenter> imple
 
     @Override
     public void onDetach() {
-        mStorage = null;
         mRefreshOwner = null;
         super.onDetach();
     }
